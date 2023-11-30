@@ -107,7 +107,7 @@ export default function AdminView() {
                               Total Paid Amount :
                             </p>
                             <p className="text-sm  font-semibold text-gray-900">
-                              ${item?.totalPrice}
+                            ₹{item?.totalPrice}
                             </p>
                           </div>
                         </div>

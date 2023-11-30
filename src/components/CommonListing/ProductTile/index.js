@@ -21,7 +21,7 @@ import { useRouter } from "next/navigation";
           </p>
         </div>
       ) : null}
-      <div className="my-2 ml-6 mx-auto flex w-10/12 flex-col items-start justify-between">
+      <div className="my-2 ml-8 mx-auto flex w-10/12 flex-col items-start justify-between">
       <h3 className="mt-2 text-black font-semibold text-sm">{item.name}</h3>
 
         <div className="mb-2 flex ">

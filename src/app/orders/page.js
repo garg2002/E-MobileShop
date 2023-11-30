@@ -60,36 +60,36 @@ export default function Orders() {
   return (
     <section>
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mt-8 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="mt-8 mx-auto max-w-screen-xl  sm:px-6 lg:px-8">
           <div>
-            <div className="px-4 py-6 sm:px-8 sm:py-10">
+            <div className=" py-6 sm:px-8 sm:py-10">
               <div className="flow-root">
                 {allOrdersForUser && allOrdersForUser.length ? (
                   <ul className="flex flex-col gap-4">
                     {allOrdersForUser.map((item) => (
                       <li
                         key={item._id}
-                        className="bg-gray-200 shadow p-5 flex flex-col space-y-3 py-6 text-left"
+                        className="bg-gray-200 shadow pl-2 lg:p-5 flex flex-col space-y-3 py-6 text-left"
                       >
-                        <div className="flex">
-                          <h1 className="font-bold text-lg mb-3 flex-1">
+                        <div className="flex gap-2">
+                          <h1 className="font-bold text-sm lg:text-lg mb-3 flex-1">
                             #order: {item._id}
                           </h1>
-                          <div className="flex items-center">
-                            <p className="mr-3 text-sm font-medium text-gray-900">
-                              Total paid amount
+                          <div className="items-center">
+                            <p className="ml-2 text-lg lg:text-2xl font-bold text-gray-900">
+                              Total 
                             </p>
-                            <p className="mr-3 text-2xl  font-semibold text-gray-900">
+                            <p className="mr-3 text-lg  lg:text-2xl  font-semibold text-gray-900">
                             ₹{item.totalPrice}
                             </p>
                           </div>
                         </div>
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 ">
                           {item.orderItems.map((orderItem, index) => (
-                            <div key={index} className="shrink-0">
+                            <div key={index} className="shrink-0 ">
                               <img
                                 alt="Order Item"
-                                className="h-24 w-24 max-w-full rounded-lg "
+                                className="h-24 w-24 max-w-full  "
                                 src={
                                   orderItem &&
                                   orderItem.product &&
@@ -100,14 +100,14 @@ export default function Orders() {
                           ))}
                         </div>
                         <div className="flex gap-5">
-                          <button className="disabled:opacity-50 mt-5 mr-5  inline-block bg-red-700 hover:bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide">
+                          <button className="disabled:opacity-50 mt-5 mr-5  inline-block bg-red-700 hover:bg-black text-white px-2 py-2 text-xs font-medium uppercase tracking-wide lg:text-sm">
                             {item.isProcessing
                               ? "Order is Processing"
                               : "Order is delivered"}
                           </button>
                           <button
                             onClick={() => router.push(`/orders/${item._id}`)}
-                            className=" mt-5 mr-5  inline-block bg-yellow-500 hover:bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
+                            className=" mt-5 mr-5  inline-block bg-yellow-500 hover:bg-black text-white px-2 py-2 lg:px-5 lg:py-4 text-xs font-medium uppercase tracking-wide lg:text-sm"
                           >
                             View Order Details
                           </button>

@@ -16,7 +16,7 @@ export default function CommonListing({ data }) {
   return (
     <section className="bg-white py-1 sm:py-2">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 outline-2">
-        <div className="my-10 grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-4 lg:mt-16">
+        <div className="my-10 grid grid-cols-1 gap-6 sm:grid-cols-4 sm:gap-4 lg:mt-16">
           {data && data.length
             ? data.map((item) => (
                 <article

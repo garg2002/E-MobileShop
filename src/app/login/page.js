@@ -45,7 +45,7 @@ export default function Login() {
     setComponentLevelLoader({ loading: true, id: "" });
     const res = await login(formData);
 
-    console.log(res);
+    console.log(res); 
 
     if (res.success) {
       toast.success(res.message, {
